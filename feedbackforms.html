@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Feedback Forms</title>
+   <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 60px;
+      font-family: Georgia, serif;
+      background-color: #f5f1e8;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 29px, #e9e1d1 30px),
+                        repeating-linear-gradient(90deg, transparent, transparent 29px, #e9e1d1 30px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #611427;
+      padding: 5px 60px;
+      border-bottom: 1px solid #e5ded1;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      color: #fdf6e9;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fdf6e9;
+      padding: 4px 4px;
+    }
+
+    .nav-links li a:hover {
+      color: #9a2e2e;
+      border-bottom: 2px solid #611427;
+    }
+
+    .header {
+      background: linear-gradient(to bottom, #9a2e2e, #611427);
+      color: #ffffff;
+      padding: 20px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 100%;
+      letter-spacing: 2px;
+    }
+
+    .content-box {
+      background-color: #ffffff;
+      border: 1px solid #e0dcd7;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      box-shadow: 0 6px 14px rgba(97, 20, 39, 0.1);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .content-box p {
+      font-size: 130%;
+      color: #611427;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    form label {
+      font-weight: bold;
+      color: #2e2e2e;
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    form textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      resize: vertical;
+    }
+
+    .form-button {
+      display: block;
+      margin: 0 auto;
+      background-color: #611427;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 90%;
+      font-weight: bold;
+    }
+
+    .form-button:hover {
+      background-color: #9a2e2e;
+    }
+
+    .disclaimer-fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #eae5e0;
+      color: #555555;
+      font-size: 75%;
+      text-align: center;
+      padding: 10px 20px;
+      border-top: 1px solid #cccccc;
+      z-index: 999;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+<div class="navbar">
+    <div class="logo">
+      <span>Carry <br>n Go</br></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="website.html">Home</a></li>
+      <li><a href="ourproducts.html">Collections</a></li>
+      <li><a href="vmo.html">Vission, Mission & Objective</a></li>
+      <li><a href="employee.html">Our Employee</a></li>
+      <li><a href="purchase.html">Purchase</a></li>
+      <li><a href="customerreview.html">Customer Review</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="officehours.html">Office Hours</a></li>
+      <li><a href="feedbackforms.html">Feedback Forms</a></li>
+      <li><a href="termsconditions.html">Terms & Conditions</a></li>
+      <li><a href="policy.html">Policy</a></li>
+      <li><a href="maps.html">Maps</a></li>
+    </ul>
+      </div>
+
+  <div class="header">
+    <h1>FEEDBACK FORMS</h1>
+  </div>
+
+  <div class="content-box">
+    <p>We value your feedback!</p>
+    <form action="https://formspree.io/f/mdkzypyv" method="POST">
+  <input type="hidden" name="_replyto" value="anonymous@carryngo.com" />
+
+  <div>
+    <label for="like">What you like about us:</label>
+    <textarea id="like" name="like" required="required"></textarea>
+  </div>
+
+  <div>
+    <label for="dislike">What you dislike about us:</label>
+    <textarea id="dislike" name="dislike" required="required"></textarea>
+  </div>
+
+  <input type="submit" class="form-button" value="Send Feedback" />
+  </form>
+  </div>
+
+  <div class="disclaimer-fixed">
+    Disclaimer: This website is not the official website of Carry N Go. This website was developed for the purpose of learning XHTML &amp; CSS only.
+  </div>
+
+</body>
+</html>

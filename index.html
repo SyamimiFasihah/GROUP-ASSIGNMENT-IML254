@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Carry n Go</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+      background-color: #f5f1e8;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 29px, #e9e1d1 30px),
+                        repeating-linear-gradient(90deg, transparent, transparent 29px, #e9e1d1 30px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #611427;
+      padding: 5px 60px;
+      border-bottom: 1px solid #e5ded1;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      color: #fdf6e9;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fdf6e9;
+      padding: 4px 4px;
+    }
+
+    .nav-links li a:hover {
+      color: #9a2e2e;
+      border-bottom: 2px solid #fdf6e9;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 80px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      color: #611427;
+      margin: 0 0 20px;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      color: #303030;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .explore-btn,
+    .about-btn {
+      padding: 12px 24px;
+      margin: 20px 0;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 2px solid #611427;
+      cursor: pointer;
+      background-color: #fff;
+      color: #611427;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .explore-btn {
+      background-color: #611427;
+      color: #fff;
+    }
+
+    .explore-btn:hover {
+      background-color: #3e0d1b;
+    }
+
+    .about-btn:hover {
+      background-color: #f5e9e0;
+    }
+
+    .dropdown-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 80%;
+      left: 0;
+      background-color: #fdf6e9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      width: 200px;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #611427;
+      font-size: 14px;
+      border-bottom: 1px solid #e5ded1;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #f5e9e0;
+    }
+
+    .dropdown-wrapper:hover .dropdown {
+      display: block;
+    }
+
+    .hero-video {
+      max-width: 250px;
+      position: relative;
+      padding-right: 150px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid #611427;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      background-color: #000;
+    }
+
+    .disclaimer-fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #eae5e0;
+      color: #555555;
+      font-size: 75%;
+      text-align: center;
+      padding: 10px 15px;
+      border-top: 1px solid #cccccc;
+      z-index: 999;
+      font-style: italic;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero-video {
+        max-width: 100%;
+        margin-top: 30px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span>Carry <br />n Go</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ourproducts.html">Collections</a></li>
+      <li><a href="vmo.html">Vission, Mission &amp; Objective</a></li>
+      <li><a href="employee.html">Our Employee</a></li>
+      <li><a href="purchase.html">Purchase</a></li>
+      <li><a href="customerreview.html">Customer Review</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="officehours.html">Office Hours</a></li>
+      <li><a href="feedbackforms.html">Feedback Forms</a></li>
+      <li><a href="termsconditions.html">Terms &amp; Conditions</a></li>
+      <li><a href="policy.html">Policy</a></li>
+      <li><a href="maps.html">Maps</a></li>
+    </ul>
+  </div>
+
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Elegance in Every<br />Journey</h1>
+      <p>Discover our exclusive collection of premium bags<br />designed for students.</p>
+      <div class="hero-buttons">
+        <a class="explore-btn" href="group.html">Group Profile</a>
+        <div class="dropdown-wrapper">
+          <button class="about-btn">About Us</button>
+          <div class="dropdown">
+            <a href="orgchart.html">Organization Chart</a>
+            <a href="companybackground.html">Company Background</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-video">
+  <a href="bagvideo.mp4" style="display: block;">
+    <div class="video-wrapper">
+      <video class="hover-video" muted playsinline poster="bagposter.jpg">
+        <source src="bagvideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </a>
+</div>
+
+  <div class="disclaimer-fixed">
+    Disclaimer: This website is not the official website of Carry N Go. This website was developed for the purpose of learning XHTML &amp; CSS only.
+  </div>
+
+  <script type="text/javascript">
+    const hoverVideo = document.querySelector('.hover-video');
+
+    hoverVideo.addEventListener('mouseenter', function () {
+      hoverVideo.play();
+    });
+
+    hoverVideo.addEventListener('mouseleave', function () {
+      hoverVideo.pause();
+      hoverVideo.currentTime = 0;
+    });
+  </script>
+</body>
+</html>
